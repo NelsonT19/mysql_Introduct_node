@@ -19,6 +19,7 @@ const connection = mysql.createConnection({
 
  connection.connect( (err) =>{
     if(err){
+
         console.log(err)
         
     }else{
@@ -43,8 +44,9 @@ app.listen(PORT, function(){
 
 // pedido em http://localhost:5000/city
 app.get('/city',(req, res) => {
-    connection.query("SELECT Name FROM city",(err,result) =>{
+    connection.query("SELECT * FROM city",(err,result) =>{
         if(err){
+            console.log(err)
             console.log('Deu m****')
         }else{
             res.json(result)
