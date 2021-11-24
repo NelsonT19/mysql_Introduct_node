@@ -17,3 +17,10 @@ function proccesData(data){
         cidadesDiv.innerHTML += row
     }
 }
+
+
+function cleanDiv(){
+
+    const cidadesDiv = document.getElementById('cidades')
+    cidadesDiv.innerHTML=""
+}
