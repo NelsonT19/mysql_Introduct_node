@@ -1,7 +1,7 @@
 const express = require('express')
 const mysql = require('mysql2');
 
-require('dotenv').config({path: './.env'})
+require('dotenv').config({path: '../.env'})
 
 
 const connection = mysql.createConnection({
@@ -23,7 +23,6 @@ const connection = mysql.createConnection({
     }
  })
 
-
-
+ 
 
 module.exports = connection
