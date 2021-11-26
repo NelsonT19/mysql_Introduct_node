@@ -9,18 +9,27 @@ function verCidades(){
 
 function proccesData(data){
 
-    const cidadesDiv = document.getElementById('cidades')
-    cidadesDiv.innerHTML=""
+    const tabela = document.getElementById('tabela')
+    tabela.innerHTML=""
     for( var i=0;i<9;i++){
         let city = data[i].Name
-        let row = `<h2>${city}</h2>`
-        cidadesDiv.innerHTML += row
+        let dis = data[i].District
+        let pop = data[i].Population
+        let row = `
+        <tr>
+            <td>${city}</td>
+            <td>${dis}</td>
+            <td>${pop}</td>
+        
+        </tr>`
+        tabela.innerHTML += row
     }
 }
 
 
 function cleanDiv(){
 
-    const cidadesDiv = document.getElementById('cidades')
+    const cidadesDiv = document.getElementById('tabela')
     cidadesDiv.innerHTML=""
 }
+
